@@ -1,0 +1,7 @@
+{"run_list":[
+  "localedef",
+  "yum",
+  "wget",
+  "vim"
+]
+}

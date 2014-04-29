@@ -6,6 +6,8 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+include_recipe "ncurses-devel"
+
 bash "install vim" do
     user 'root'
     group 'root'
