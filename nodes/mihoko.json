@@ -3,6 +3,7 @@
   "yum",
   "wget",
   "bind-utils",
+  "users",
   "vim"
 ]
 }
