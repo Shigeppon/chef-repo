@@ -1,8 +1,10 @@
-{"run_list":[
-  "localedef",
-  "yum",
-  "wget",
-  "bind-utils",
-  "vim"
-]
+{
+  "run_list":[
+    "localedef",
+    //"wget",
+    //"bind-utils",
+    "user-admin",
+    //"nginx",
+    "vim"
+    ]
 }

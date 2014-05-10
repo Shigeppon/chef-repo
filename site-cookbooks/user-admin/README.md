@@ -1,19 +1,24 @@
-# vim Cookbook
-Vim7.4をソースからインストールするクックブック  
-以下の方針でインストールする  
-* /usr/local/binにインストール
-* 日本語(マルチバイト)に対応する
-* ほとんどの機能を有効にしてコンパイルする
-* 参考URL
-[CentOS 6.3にVim 7.3をインストールする](http://qiita.com/muniere/items/0569d05d470c5d3dc51b)
+user-admin Cookbook
+===================
+TODO: Enter the cookbook description here.
 
-## Requirements
+e.g.
+This cookbook makes your favorite breakfast sandwich.
 
+Requirements
+------------
+TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
+
+e.g.
 #### packages
+- `toaster` - user-admin needs toaster to brown your bagel.
 
-## Attributes
+Attributes
+----------
+TODO: List your cookbook attributes here.
 
-#### vim::default
+e.g.
+#### user-admin::default
 <table>
   <tr>
     <th>Key</th>
@@ -22,7 +27,7 @@ Vim7.4をソースからインストールするクックブック
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['vim']['bacon']</tt></td>
+    <td><tt>['user-admin']['bacon']</tt></td>
     <td>Boolean</td>
     <td>whether to include bacon</td>
     <td><tt>true</tt></td>
@@ -31,17 +36,17 @@ Vim7.4をソースからインストールするクックブック
 
 Usage
 -----
-#### vim::default
+#### user-admin::default
 TODO: Write usage instructions for each cookbook.
 
 e.g.
-Just include `vim` in your node's `run_list`:
+Just include `user-admin` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[vim]"
+    "recipe[user-admin]"
   ]
 }
 ```
@@ -53,7 +58,7 @@ TODO: (optional) If this is a public cookbook, detail the process for contributi
 e.g.
 1. Fork the repository on Github
 2. Create a named feature branch (like `add_component_x`)
-3. Write you change
+3. Write your change
 4. Write tests for your change (if applicable)
 5. Run the tests, ensuring they all pass
 6. Submit a Pull Request using Github

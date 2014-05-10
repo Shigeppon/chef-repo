@@ -1,11 +1,11 @@
-vim CHANGELOG
-=============
+user-admin CHANGELOG
+====================
 
-This file is used to list changes made in each version of the vim cookbook.
+This file is used to list changes made in each version of the user-admin cookbook.
 
 0.1.0
 -----
-- [your_name] - Initial release of vim
+- [your_name] - Initial release of user-admin
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
