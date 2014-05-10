@@ -2,6 +2,7 @@
   "localedef",
   "yum",
   "wget",
+  "bind-utils",
   "vim"
 ]
 }
