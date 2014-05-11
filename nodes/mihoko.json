@@ -1,10 +1,25 @@
 {
+  "authorization": {
+    "sudo": {
+      "groups": ["admin", "wheel", "sysadmin"],
+      "users": ["vagrant","shigeo"],
+      "passwordless": "true",
+      "sudoers_defaults": [
+        "!visiblepw",
+        "env_reset",
+        "always_set_home",
+        "secure_path = /sbin:/bin:/usr/sbin:/usr/bin"
+      ]
+    }
+  },
+  "vim":{"install_method": "source"},
   "run_list":[
     "localedef",
-    //"wget",
-    //"bind-utils",
-    "user-admin",
-    //"nginx",
-    "vim"
+  "wget",
+  "bind-utils",
+  "user-admin",
+  "sudo",
+  "nginx",
+  "vim"
     ]
 }
