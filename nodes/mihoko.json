@@ -14,12 +14,14 @@
   },
   "vim":{"install_method": "source"},
   "run_list":[
+    "devel-pkg",
     "localedef",
   "wget",
   "bind-utils",
   "user-admin",
   "sudo",
   "nginx",
+  "git",
   "vim"
     ]
 }
