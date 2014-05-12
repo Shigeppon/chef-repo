@@ -11,6 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "base"
+  config.vm.hostname = "mihoko"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
