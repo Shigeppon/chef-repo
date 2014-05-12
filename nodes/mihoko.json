@@ -8,7 +8,7 @@
         "!visiblepw",
         "env_reset",
         "always_set_home",
-        "secure_path = /sbin:/bin:/usr/sbin:/usr/bin"
+        "secure_path = /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin"
         ]
     }
   },
@@ -27,6 +27,7 @@
     "nginx",
     "git",
     "nodejs",
+    "haskell::ghc",
     "vim"
     ]
 }
