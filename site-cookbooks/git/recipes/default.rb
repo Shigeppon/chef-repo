@@ -6,23 +6,31 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-%w{cpan gettext}.each do |pkg|
-    yum_package pkg do
-        action :install
-    end
+
+install_dir = '/usr/local/src'
+version     = node['git']['version']
+source_uri  = node['git']['source_uri']
+configure   = node['git']['configure']
+
+node['git']['packages'].each do |package_name|
+  package "#{package_name}" do
+    :install
+  end
+end
+
+remote_file "/tmp/git-#{version}.tar.gz" do
+  not_if "/usr/local/bin/git --version | grep -q #{version}"
+  source "#{source_uri}"
 end
 
 bash "install git" do
-    user 'vagrant'
-    group 'vagrant'
-    cwd '/tmp'
-    code <<-EOC
-        wget https://git-core.googlecode.com/files/git-1.8.4.tar.gz
-        tar zxvf git-1.8.4.tar.gz
-        cd git-1.8.4
-        ./configure --prefix=/usr/local
-        make
-        sudo make install
-    EOC
-    not_if "/usr/local/bin/git --version | grep -q '1.8.4'"
+  not_if "/usr/local/bin/git --version | grep -q #{version}"
+  user 'root'
+
+  code <<-EOC
+    install -d #{install_dir}
+    tar zxf /tmp/git-#{version}.tar.gz -C #{install_dir}
+    cd #{install_dir}/git-#{version}
+    #{configure} && make && make install
+  EOC
 end
