@@ -18,6 +18,7 @@
   },
   "vim":{"install_method": "source"},
   "run_list":[
+    "base",
     "localedef",
     "wget",
     "bind-utils",
@@ -25,6 +26,7 @@
     "sudo",
     "nginx",
     "git",
+    "nodejs",
     "vim"
     ]
 }

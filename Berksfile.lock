@@ -1,6 +1,6 @@
 DEPENDENCIES
-  git
   nginx
+  nodejs
   sudo
   user
   vim
@@ -10,15 +10,6 @@ GRAPH
   bluepill (2.3.1)
     rsyslog (>= 0.0.0)
   build-essential (2.0.2)
-  chef_handler (1.1.6)
-  dmg (2.2.0)
-  git (4.0.2)
-    build-essential (>= 0.0.0)
-    dmg (>= 0.0.0)
-    runit (>= 1.0.0)
-    windows (>= 0.0.0)
-    yum (~> 3.0)
-    yum-epel (>= 0.0.0)
   nginx (2.6.2)
     apt (~> 2.2)
     bluepill (~> 2.3)
@@ -26,6 +17,10 @@ GRAPH
     ohai (~> 1.1)
     runit (~> 1.2)
     yum-epel (~> 0.3)
+  nodejs (1.3.0)
+    apt (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    yum (>= 0.0.0)
   ohai (1.1.12)
   rsyslog (1.12.2)
   runit (1.5.10)
@@ -35,8 +30,6 @@ GRAPH
   sudo (2.5.2)
   user (0.3.0)
   vim (1.1.2)
-  windows (1.31.0)
-    chef_handler (>= 0.0.0)
   yum (3.2.0)
   yum-epel (0.3.6)
     yum (~> 3.0)
