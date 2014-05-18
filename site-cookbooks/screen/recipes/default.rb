@@ -24,9 +24,9 @@ bash "install screen" do
     code <<-EOC
         cd /tmp/screen/src
         ./autogen.sh
-        ./configure --prefix=/usr/local
+        ./configure --prefix=/usr/local --enable-colors256
         make
         sudo make install
     EOC
-    not_if "/usr/local/bin/screen --version | grep -q '4.01.00devel'"
+    not_if "/usr/local/bin/screen --version | grep -q '4.02.01'"
 end

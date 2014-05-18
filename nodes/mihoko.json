@@ -28,6 +28,7 @@
     "git",
     "nodejs",
     "haskell::ghc",
+    "screen",
     "vim"
     ]
 }
