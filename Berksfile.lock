@@ -1,6 +1,7 @@
 DEPENDENCIES
   nginx
   nodejs
+  ntp
   sudo
   user
   vim
@@ -21,6 +22,7 @@ GRAPH
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
     yum (>= 0.0.0)
+  ntp (1.6.2)
   ohai (1.1.12)
   rsyslog (1.12.2)
   runit (1.5.10)

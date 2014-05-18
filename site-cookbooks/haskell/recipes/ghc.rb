@@ -19,12 +19,12 @@ node['ghc']['packages'].each do |package_name|
 end
 
 remote_file "/tmp/ghc-#{version}-x86_64-unknown-linux.tar.bz2" do
-  #not_if "/usr/local/bin/ghc --version | grep -q #{version}"
+  not_if "/usr/local/bin/ghc --version | grep -q #{version}"
   source "#{source_uri}"
 end
 
 bash "install ghc" do
-  #not_if "/usr/local/bin/ghc --version | grep -q #{version}"
+  not_if "/usr/local/bin/ghc --version | grep -q #{version}"
   user 'root'
 
   code <<-EOC

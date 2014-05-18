@@ -13,3 +13,11 @@ execute "localedef" do
   action :run
   not_if "locale -a | grep -q 'ja_JP'"
 end
+
+execute "localtime" do
+  user "root"
+  group "root"
+  command "sudo cp -p /usr/share/zoneinfo/Japan /etc/localtime"
+  action :run
+  not_if "date | grep -q 'JST'"
+end
